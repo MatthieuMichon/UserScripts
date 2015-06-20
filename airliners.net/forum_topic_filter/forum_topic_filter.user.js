@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Airliners.net Topic Filter
-// @namespace    https://github.com/MatthieuMichon/UserScripts/airliners.net/forum_topic_filter.js
+// @namespace    https://github.com/MatthieuMichon/UserScripts/
 // @copyright    2015+, Matthieu Michon
 // @license      GNU GPLv3
 // @version      1
