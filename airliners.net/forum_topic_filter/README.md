@@ -14,6 +14,7 @@ This user script attempts to achieve this goal by hiding posts written by author
 Works with the following browser / plugins combos:
 * [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) on [Mozilla Firefox](http://www.mozilla.org/en-US/firefox/fx/#desktop) desktop.
 * [TamperMonkey](http://tampermonkey.net) on [Google Chrome](https://www.google.com/chrome/) desktop.
+
 Didn't try anything else.
 
 ## Version History
