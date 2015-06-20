@@ -1,5 +1,8 @@
 # [Topic Filter](https://github.com/MatthieuMichon/UserScripts/tree/master/airliners.net/forum_topic_filter/)
 
+* [Install](https://github.com/MatthieuMichon/UserScripts/raw/master/airliners.net/forum_topic_filter/forum_topic_filter.user.js)
+* [View source](https://github.com/MatthieuMichon/UserScripts/blob/master/airliners.net/forum_topic_filter/forum_topic_filter.user.js)
+
 ## Description
 
 [Airliners.net forums](http://www.airliners.net/aviation-forums/) are a good source of information, but as like most boards on the net, the quality of some topics could be raised by ignoring authors lacking insight.
