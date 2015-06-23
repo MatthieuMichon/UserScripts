@@ -32,11 +32,49 @@ function getTorScoreArray(array){
   return torScoreArray;
 }
 
+function max(array){
+  "use strict";
+  return array.reduce(function (prev, curr){
+    return (prev > curr ? prev : curr);
+  });
+}
+
+function normalize(array, maxValue){
+  "use strict";
+  var maxScore = max(array);
+  var normArray = array.map(function(value){
+    return Math.round(maxValue*value/maxScore);
+  });
+  return normArray;
+}
+
+function getColorArray(array){
+  "use strict";
+  var colorArray = array.map(function(value){
+    return "rgb("+(value).toString(10)+", "+(value).toString(10)+", "+(value).toString(10)+")";
+  });
+  return colorArray;
+}
+
+function applyColorArray(torArray, colorArray){
+  "use strict";
+  //debugger;
+  torArray.map(function(tor, index){
+    tor.style.backgroundColor = colorArray[index];
+    return;
+  });
+}
+
 function main(){
   "use strict";
-  var torArray = getTorCntArray(torListQuery);
-  var scoreArray = getTorScoreArray(torArray);
-  return scoreArray;
+  var torCntArray = getTorCntArray(torListQuery);
+  var scoreArray = getTorScoreArray(torCntArray);
+  var scoreNormArray = normalize(scoreArray, 255);
+  var colorArray = getColorArray(scoreNormArray);
+  
+  var torArray = [].slice.call(document.querySelectorAll(torListQuery));
+  applyColorArray(torArray, colorArray);
+  return colorArray;
 }
 
 main();
