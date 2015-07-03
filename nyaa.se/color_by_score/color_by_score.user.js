@@ -6,7 +6,7 @@
 // @version      1
 // @description  Colors entries depending on their popularity
 // @author       Matthieu Michon
-// @match        http://www.nyaa.se
+// @match        http://www.nyaa.se/*
 // @grant        none
 // ==/UserScript==
 
