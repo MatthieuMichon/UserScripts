@@ -18,7 +18,7 @@
 var torListQuery = "#main > div.content > table.tlist > tbody > tr.tlistrow";
 var torQueries = ["td.tlistsn", "td.tlistln", "td.tlistdn", "td.tlistmn"];
 var cntCoef = [4, 3, 1, 10];
-
+var scoreEnabled = false;
 
 
 /**
@@ -141,9 +141,22 @@ function getColorArray(array){
 
 function applyColorArray(torArray, colorArray){
   "use strict";
-  //debugger;
   torArray.map(function(tor, index){
     tor.style.backgroundColor = colorArray[index];
+  });
+}
+
+
+/**
+ * resetColorArray - Reset CSS backgroundColor properties
+ *
+ * torArray: array of entries
+ */
+
+function resetColorArray(torArray){
+  "use strict";
+  torArray.map(function(tor, index){
+    tor.style.backgroundColor = "";
   });
 }
 
@@ -161,7 +174,31 @@ function main(){
   
   var torArray = [].slice.call(document.querySelectorAll(torListQuery));
   applyColorArray(torArray, colorArray);
-  return colorArray;
+  scoreEnabled = true;
 }
 
+
+/**
+ * docKd - Key down event handler for complete document
+ * 
+ * e: event information
+ */
+
+function docKd(e){
+  "use strict";
+  // debugger;
+  if (e.keyCode == 84) {
+    // 't'
+    if (scoreEnabled) {
+      var torArray = [].slice.call(document.querySelectorAll(torListQuery));
+      resetColorArray(torArray);
+      scoreEnabled = false;
+    } else {
+      main();
+    }
+  }
+}
+
+
 main();
+document.addEventListener("keydown", docKd, false);
