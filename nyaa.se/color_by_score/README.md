@@ -9,6 +9,12 @@ Finding the popular entries in literaly hundred of them would be more fun with e
 
 This user-script performs exactly that, cue for the ugly colors.
 
+### Usage ###
+
+|Key|Description|
+|---|---|
+|<kbd>t</kbd>|Toggle between normal colors and score-dependant colors|
+
 ## Compatibility
 
 TBD
