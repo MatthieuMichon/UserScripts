@@ -34,7 +34,9 @@ function getCntFromTor(tor){
   "use strict";
   var retArray = torQueries.map(function(query){
     /* apply each query in the torQueries array to the given torrent entry */
-    var txt = tor.querySelector(query).textContent;
+    var html = tor.querySelector(query);
+    if (!html) return 0; // unexpected content
+    var txt = html.textContent;
     return parseInt(txt);
   });
   return retArray;
