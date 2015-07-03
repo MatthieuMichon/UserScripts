@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Airliners.net Topic Filter
+// @name         NYAA fast glance
 // @namespace    https://github.com/MatthieuMichon/UserScripts/
 // @copyright    2015+, Matthieu Michon
 // @license      GNU GPLv3
